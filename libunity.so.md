@@ -36,7 +36,7 @@ set_fog(去雾):
 
 ### 原理
 RenderSettings.set_fog 中原来的代码（一部分）是：
-```
+```cpp
 MOV	R4, R0
 CMP	R4, #0
 MOVWNE	R4, #1
@@ -44,7 +44,7 @@ BL	#0xFF876680
 ```
 
 修改后：  
-```
+```cpp
 MOV	R4, #0
 CMP	R4, #0
 MOVWNE	R4, #1
